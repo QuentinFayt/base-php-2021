@@ -24,19 +24,10 @@
     <?php
 
     $int1=1;
-    $int2=(int)"-50";
-    $int3=(int)0.5;
+    $int2=int("-50");
+    $int3=int(0.5);
 
     var_dump($int1,$int2,$int3);
-    ?>
-    <h2>Les floats:</h2>
-    <?php
-
-    $float1=1.111111;
-    $float2=(float)"-50.50";
-    $float3=(float)0;
-
-    var_dump($float1,$float2,$float3);
     ?>
 </body>
 </html>

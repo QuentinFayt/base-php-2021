@@ -32,11 +32,11 @@
     <h2>Les floats:</h2>
     <?php
 
-    $float1=1.111111;
-    $float2=(float)"-50.50";
-    $float3=(float)0;
+    $int1=1.111111;
+    $int2=(float)"-50.50";
+    $int3=(float)0.0;
 
-    var_dump($float1,$float2,$float3);
+    var_dump($int1,$int2,$int3);
     ?>
 </body>
 </html>
