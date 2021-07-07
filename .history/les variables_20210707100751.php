@@ -51,6 +51,11 @@
     $string3='$string1 vaut: '."$string1";
 
     var_dump($string1,$string2,$string3);
+
+    $name = "Fayt";
+$surname = "Quentin"; 
+$age = 28;
+    echo "<p>Mon nom est "."$name"." "."$surname"." et j'ai "."$age"." ans</p>";
     ?>
 </body>
 </html>

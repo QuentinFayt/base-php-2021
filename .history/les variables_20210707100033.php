@@ -48,7 +48,7 @@
 
     $string1="Une chaine de caractère";
     $string2="68";
-    $string3='$string1 vaut: '."$string1";
+    $string3=("string1".'string1');
 
     var_dump($string1,$string2,$string3);
     ?>
