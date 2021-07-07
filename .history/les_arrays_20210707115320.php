@@ -28,7 +28,7 @@
         echo "<p>Il y a ".$nbEleves.' éléments dans le tableau $eleves</p>';
 
         for($n=0;$n<$nbEleves;$n++){
-            echo "<p>$eleves[$n]</p>";
+            echo $eleves[$n];
         }
 
     ?>

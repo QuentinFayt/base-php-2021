@@ -25,10 +25,10 @@
 
         $nbEleves = count($eleves);
 
-        echo "<p>Il y a ".$nbEleves.' éléments dans le tableau $eleves</p>';
+        echo "Il y a ".$nbEleves.' éléments dans le tableau $eleves';
 
         for($n=0;$n<$nbEleves;$n++){
-            echo "<p>$eleves[$n]</p>";
+            echo $eleves[$n];
         }
 
     ?>

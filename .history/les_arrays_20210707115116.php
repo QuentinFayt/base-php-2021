@@ -23,14 +23,10 @@
 
         echo "<p> Pour compter le nombre d'élément d'un tableau on utilise count()</p>";
 
-        $nbEleves = count($eleves);
+        $nbEleve = count($eleves);
 
-        echo "<p>Il y a ".$nbEleves.' éléments dans le tableau $eleves</p>';
-
-        for($n=0;$n<$nbEleves;$n++){
-            echo "<p>$eleves[$n]</p>";
-        }
-
+        echo "Il y a ".$nbEleve.' dans le tableau $eleves';
+        
     ?>
     <h2>Deuxième type</h2>
     <?php
