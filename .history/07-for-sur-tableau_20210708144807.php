@@ -18,17 +18,12 @@ for($i=0; $i<$countPays; $i++){
     echo ($i+1).") $tabPays[$i]<br>";
 }
 // vérification de la première et dernière clef supposées existantes
-echo "<p>$tabPays[0] - $tabPays[229]</p>";
+echo "<br>$tabPays[0] - $tabPays[229]";
 // quand on dit que PHP est tableau
 $string = "bonjour les amis";
 // variable qui contient le nombre de caractères
 $nbString = strlen($string);
 
 for($i=0; $i<$nbString;$i++){
-    if($string[$i]===" "){
-        echo "<br/>";
-    }
-    else{
-        echo "<p>$string[$i]</p>";
-    }
+    echo "$string[$i]<br/>";
 }

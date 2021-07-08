@@ -20,7 +20,7 @@ for($i=0; $i<$countPays; $i++){
 // vérification de la première et dernière clef supposées existantes
 echo "<p>$tabPays[0] - $tabPays[229]</p>";
 // quand on dit que PHP est tableau
-$string = "bonjour les amis";
+$string = "Et comment ça va?";
 // variable qui contient le nombre de caractères
 $nbString = strlen($string);
 

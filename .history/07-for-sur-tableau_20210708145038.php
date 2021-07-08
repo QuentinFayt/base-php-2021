@@ -25,10 +25,10 @@ $string = "bonjour les amis";
 $nbString = strlen($string);
 
 for($i=0; $i<$nbString;$i++){
-    if($string[$i]===" "){
-        echo "<br/>";
-    }
-    else{
-        echo "<p>$string[$i]</p>";
-    }
+        if($i=7 && $i=11){
+            echo "<p><br/></p>";
+        }
+        else{
+            echo "<p>$string[$i]</p>";
+        }
 }

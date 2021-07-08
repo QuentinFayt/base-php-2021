@@ -25,8 +25,8 @@ $string = "bonjour les amis";
 $nbString = strlen($string);
 
 for($i=0; $i<$nbString;$i++){
-    if($string[$i]===" "){
-        echo "<br/>";
+    if($i==7 && $i==11){
+        echo "<br/><br/>";
     }
     else{
         echo "<p>$string[$i]</p>";

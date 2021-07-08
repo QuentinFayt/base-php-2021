@@ -25,7 +25,7 @@ $string = "bonjour les amis";
 $nbString = strlen($string);
 
 for($i=0; $i<$nbString;$i++){
-    if($string[$i]===" "){
+    if($i==7 && $i==11){
         echo "<br/>";
     }
     else{
