@@ -1,7 +1,7 @@
 <?php
 /* var_dump($_POST); */
 $connectToDB = mysqli_connect("localhost", "root", "", "ex09", 3307);
-mysqli_set_charset($connectToDB, "utf8");
+
 if (!empty($_POST)) {
     $text = htmlspecialchars(strip_tags(trim($_POST["user_message"])), ENT_QUOTES);
     $name = htmlspecialchars(strip_tags(trim($_POST["user_name"])), ENT_QUOTES);
@@ -12,7 +12,7 @@ if (!empty($_POST)) {
 }
 
 
-
+mysqli_set_charset($connectToDB, "utf8");
 
 $previousArticles = mysqli_query($connectToDB, "SELECT * FROM goldenbook ORDER BY date DESC;");
 
