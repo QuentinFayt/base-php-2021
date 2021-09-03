@@ -12,7 +12,7 @@ do {
             echo "Les deux sont positif!";
         } elseif (0 < $x || 0 < $y) {
             echo "Un seul est positif!";
-        } elseif (!(0 <= $x ^ 0 <= $y)) {
+        } else if (!(0 <= $x ^ 0 <= $y)) {
             echo "Les deux sont négatifs";
         }
         echo "</br>";
