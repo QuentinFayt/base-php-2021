@@ -1,4 +1,11 @@
 <?php
+
+if (isset($_GET["id"]) && ctype_digit(($_GET["id"])) && !empty(($_GET["id"]))) {
+} else {
+    header("Location:./");
+    exit;
+}
+
 ?>
 
 <!DOCTYPE html>

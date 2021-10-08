@@ -49,8 +49,8 @@ if (empty($nbArticle)) {
     ?>
         <hr>
         <h4><?= $value["thearticletitle"] ?></h4>
-        <p><?= $value["thearticletext"] ?>... <a href="?page=article&id=<?= $value["idthearticle"] ?>">Lire la suite</a></p>
-        <h5>Écrit par <a href="?page=user&id=<?= $value["idtheuser"] ?>"><?= $value["theuserlogin"] ?></a> le <?= $value["thearticledate"] ?></h5>
+        <p><?= cuteTheText($value["thearticletext"], NEWS_HOME_LENGTH) ?> <a href="?page=article&id=<?= $value["idthearticle"] ?>">Lire la suite</a></p>
+        <h5>Écrit par <a href="?page=user&id=<?= $value["idtheuser"] ?>"><?= $value["theuserlogin"] ?></a> le <?= frenchDate($value["thearticledate"]) ?></h5>
     <?php
     }
     ?>

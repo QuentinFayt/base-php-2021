@@ -1,6 +1,7 @@
 <?php
 
 require_once("./config.php");
+require_once("./functions.php");
 
 $db = @mysqli_connect(MDB_HOST, MDB_USER, MDB_PWD, MDB_NAME, MDB_PORT);
 
