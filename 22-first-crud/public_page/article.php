@@ -6,7 +6,18 @@ if(isset($_GET['id'])&&ctype_digit($_GET['id'])&&!empty($_GET['id'])){
     $idarticle = (int) $_GET['id'];
 
     // requête
-    $sql="";
+    $sql="SELECT a.idthearticle, a.thearticletitle, a.thearticletext, a.thearticledate,
+    u.idtheuser, u.theuserlogin
+    FROM thearticle a
+    INNER JOIN  theuser u 
+    ON u.idtheuser = a.theuser_idtheuser
+    WHERE a.idthearticle = $idarticle ;";
+
+    $request = mysqli_query($db, $sql) or die("Erreur : ".mysqli_error($db));
+
+    mysqli_num_rows($request)?$result = mysqli_fetch_assoc($request):header("Location: ./?page=erreur404")&&exit;
+        
+    
 
 
 // pas de variable id    
@@ -31,5 +42,12 @@ if(isset($_GET['id'])&&ctype_digit($_GET['id'])&&!empty($_GET['id'])){
     include "menu.php";
     ?>
     <h1>First CRUD | Article | <!-- ici le titre de l'article --></h1>
+    <h4><?=$result['thearticletitle']?></h4>
+    <p><?=nl2br($result['thearticletext'])?></p>
+    <h5>Ecrit par <a href="?page=user&id=<?=$result['idtheuser']?>"><?=$result['theuserlogin']?></a> le <?=frenchDate($result['thearticledate'])?></h5>
+
+    <?php
+    include "menu.php";
+    ?>
 </body>
 </html>
