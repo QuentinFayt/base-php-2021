@@ -1,0 +1,7 @@
+<?php
+
+define("MAIL", "test@testmail.test");
+
+//SMTP - Simple mail transfert protocol - (Protocole d'envoi de mail)
+
+define("SMTP_HOST", "localhost");
