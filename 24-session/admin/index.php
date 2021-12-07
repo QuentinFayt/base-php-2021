@@ -2,19 +2,7 @@
 session_start();
 
 if (isset($_SESSION["myId"]) && $_SESSION["myId"] !== session_id()) {
-    session_unset();
-    $params = session_get_cookie_params();
-    setcookie(
-        session_name(),
-        '',
-        time() - 42000,
-        $params["path"],
-        $params["domain"],
-        $params["secure"],
-        $params["httponly"]
-    );
-    session_destroy();
-    header("Location: ./");
+    header("Location: ./connexion.php");
 }
 
 ?>
@@ -49,15 +37,17 @@ if (isset($_SESSION["myId"]) && $_SESSION["myId"] !== session_id()) {
     </ul>
     <h1><?= isset($_SESSION["myId"]) ? "Bienvenue " . $_SESSION['login'] : "Accueil"; ?>
         <?php
-        switch ($_SESSION["right"]) {
-            case 0:
-                echo "| Administrateur";
-                break;
-            case 1:
-                echo "| Modérateur";
-                break;
-            default:
-                echo "| Utilisateur";
+        if (isset($_SESSION["myId"])) {
+            switch ($_SESSION["right"]) {
+                case 0:
+                    echo "| Administrateur";
+                    break;
+                case 1:
+                    echo "| Modérateur";
+                    break;
+                default:
+                    echo "| Utilisateur";
+            }
         }
         ?></h1>
     <h2>Permission</h2>
