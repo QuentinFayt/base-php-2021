@@ -2,8 +2,9 @@
 session_start();
 
 if (isset($_SESSION["myId"]) && $_SESSION["myId"] !== session_id()) {
-    header("Location: ./déconnexion.php");
+    header("Location: ./connexion.php");
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,14 +39,11 @@ if (isset($_SESSION["myId"]) && $_SESSION["myId"] !== session_id()) {
         <?php
         if (isset($_SESSION["myId"])) {
             switch ($_SESSION["right"]) {
-                case "0":
+                case 0:
                     echo "| Administrateur";
                     break;
-                case "1":
+                case 1:
                     echo "| Modérateur";
-                    break;
-                case "2":
-                    echo "| Rédacteur";
                     break;
                 default:
                     echo "| Utilisateur";

@@ -3,16 +3,12 @@ session_start();
 $login = ["admin", "modo", "redac"];
 $pwd = ["admin", "modo", "redac"];
 $perm = [0, 1, 2];
-if (isset($_SESSION["myId"])) {
-    header("Location: ./déconnexion.php");
-} else {
-    if (isset($_POST["login"]) && isset($_POST["password"]) && $_POST["login"] && $_POST["password"]) {
-        if (in_array($_POST["login"], $login) && $pwd[array_search($_POST["login"], $login) !== false ? array_search($_POST["login"], $login) : die()] === $_POST["password"]) {
-            $_SESSION["myId"] = session_id();
-            $_SESSION["login"] = $_POST["login"];
-            $_SESSION["right"] = $perm[array_search($_POST["login"], $login)];
-            header("Location: ./");
-        }
+if (isset($_POST["login"]) && isset($_POST["password"]) && $_POST["login"] && $_POST["password"]) {
+    if (in_array($_POST["login"], $login) && $pwd[array_search($_POST["login"], $login) !== false ? array_search($_POST["login"], $login) : die()] === $_POST["password"]) {
+        $_SESSION["myId"] = session_id();
+        $_SESSION["login"] = $_POST["login"];
+        $_SESSION["right"] = $perm[array_search($_POST["login"], $perm)];
+        header("Location: ./");
     }
 }
 ?>

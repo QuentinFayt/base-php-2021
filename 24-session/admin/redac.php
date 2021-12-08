@@ -1,10 +1,6 @@
 <?php
 session_start();
 
-if (!isset($_SESSION["myId"]) || $_SESSION["myId"] !== session_id() || $_SESSION["right"] != 0) {
-    header("Location: ./");
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +31,7 @@ if (!isset($_SESSION["myId"]) || $_SESSION["myId"] !== session_id() || $_SESSION
         }
         ?>
     </ul>
-    <h1>Administration</h1>
+    <h1>Rédacteur</h1>
 </body>
 
 </html>
